@@ -8,8 +8,10 @@
 
 {% block body %}
 
-<h1>{{ title }}</h1>
+<h1>{{ title  }}</h1>
 
-<p>{{ content }}</p>
+<p>{{ content|safe }}</p>
+
+<a href="{% url 'edit' title=title %}">Edit Page</a>
 
 {% endblock %}
